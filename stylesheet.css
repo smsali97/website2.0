@@ -79,15 +79,9 @@ a {
   text-decoration: none;
 }
 
-.about_photo{
-  display: block;
-  margin-top: 5%;
-  width: 300px;
-  height:300px;
-  object-fit:cover;
-  border-radius:50%;
-  margin-left: auto;
-  margin-right: auto;
+.about_photo {
+  background-size: 400px 100px; /* width height */
+  background-position: center;
 }
 
 .about_logo{
@@ -209,7 +203,7 @@ a {
 
   .portfolio_image {
     display: block;
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
