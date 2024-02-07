@@ -27,32 +27,9 @@
 
 <div class="main">
     <div style="height: 300px; display: flex; align-items: center; justify-content: center;">
-        <img src="./img/minified_image.jpeg" alt="Steven Platt" style="width: 90%; height: auto;" loading="lazy">
+        <img src="./img/minified_image.jpeg" alt="Sualeh Ali" style="width: 90%; height: auto;" loading="lazy">
     </div>
-
-    <script>
-        // Optionally, you can use Intersection Observer for better control
-        document.addEventListener("DOMContentLoaded", function() {
-          var lazyImages = document.querySelectorAll('img[loading="lazy"]');
-      
-          if ("IntersectionObserver" in window) {
-            var lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-              entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                  var lazyImage = entry.target;
-                  lazyImage.src = lazyImage.dataset.src;
-                  lazyImage.classList.remove("lazy");
-                  lazyImageObserver.unobserve(lazyImage);
-                }
-              });
-            });
-      
-            lazyImages.forEach(function(lazyImage) {
-              lazyImageObserver.observe(lazyImage);
-            });
-          }
-        });
-      </script>      
+    
 
     <div class="about_text">
         <h1>Sualeh Ali</h1>
