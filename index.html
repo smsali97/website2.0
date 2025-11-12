@@ -1,68 +1,196 @@
 <!DOCTYPE html>
-<html>
-<head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" 
-      type="image/png" 
-      href="./img/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Sualeh Ali | Portfolio" />
-<meta property="og:description" content="My personal portfolio!" />
-<meta property="og:image" content="./img/minified_image.jpeg" />
-<meta property="og:url" content="www.sualehsayssalam.com" />
-<meta property="og:type" content="website" />
-<title>Sualeh Ali</title>
-<link rel="stylesheet" href="./stylesheet.css">
-<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Sualeh Ali — AI Researcher | Fulbright Scholar | IJCAI 2025</title>
+    <meta name="description" content="Sualeh Ali - AI Researcher specializing in NLP & LLMs. Fulbright Scholar (MS Data Science, RIT) with publications at IJCAI. Open to research collaborations.">
+    <meta name="keywords" content="AI Researcher, NLP Research, LLM, Fulbright Scholar, IJCAI, Machine Learning, Natural Language Processing, Rochester Institute of Technology, RIT, Academic Research">
+    <meta name="author" content="Sualeh Ali">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sualeh Ali — AI Researcher | Fulbright Scholar">
+    <meta property="og:description" content="AI Researcher specializing in NLP & LLMs. Fulbright Scholar with publications at IJCAI 2025.">
+    <meta property="og:image" content="./img/Snapseed.jpg">
+    <meta property="og:url" content="https://www.sualehsayssalam.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sualeh Ali — AI Researcher | Fulbright Scholar">
+    <meta name="twitter:description" content="AI Researcher specializing in NLP & LLMs. Publications at IJCAI 2025.">
+    <meta name="twitter:image" content="./img/Snapseed.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./stylesheet.css">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sualeh Ali",
+      "jobTitle": "AI Researcher and Engineer",
+      "description": "AI Researcher specializing in Natural Language Processing and Large Language Models. Fulbright Scholar with publications at IJCAI.",
+      "url": "https://www.sualehsayssalam.com",
+      "image": "./img/Snapseed.jpg",
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Rochester Institute of Technology",
+          "location": "Rochester, NY"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Institute of Business Administration",
+          "location": "Karachi, Pakistan"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Careem"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/smsali97",
+        "https://github.com/smsali97",
+        "https://scholar.google.co.uk/citations?hl=en&user=G06AD30AAAAJ"
+      ]
+    }
+    </script>
 </head>
 <body>
 
-<div class="sidenav">
+<!-- Navigation -->
+<nav class="sidenav" role="navigation" aria-label="Main navigation">
     <div class="navblock">
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
         <div class="navblock_text">
-            <a style="color:#3498DB" href="./index.html">About</a>
-            <a href="./resume.html">Resume</a>
-            <a href="./research.html">Research</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./blog.html">Blog</a>
+            <a href="./index.html" class="nav-link active" aria-current="page">👨‍💻 About</a>
+            <a href="./publications.html" class="nav-link">📚 Research</a>
+            <a href="./experience.html" class="nav-link">💼 Experience</a>
+            <a href="./projects.html" class="nav-link">🚀 Projects</a>
+            <a href="./contact.html" class="nav-link">✉️ Contact</a>
         </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 Sualeh Ali</p>
-    </div>
-</div>
-    <!-- <div style="display: flex; justify-content: center;">
-         <img src="./img/minified_image.jpeg" alt="Sualeh Ali" style="width: 70%; height: auto;" class="lozad">
-        <img src="./img/Snapseed.jpg" alt="Sualeh Ali Profile" style="width: 70%; height: auto;" class="lozad">
-    </div>
-    <div class="about_text">
-        <h1 style="font-size: 32px;">Sualeh Ali </h1>
-        <p><span style="color: #9aa90e; font-family: 'Comic Sans MS', cursive; font-size: 26px;">Salam! <span style="color: #3498DB;">(Hi)👋</p>
-        <p style="font-size: 20px;">I am a software engineer graduate student who is dabbling into some cool data science research areas. Welcome to my website.</p>
-        <div class="about_links">
-            <a class="about_links" target="blank" href="https://www.linkedin.com/in/smsali97">LinkedIn</a>
-            <a class="about_links" target="blank" href="https://github.com/smsali97">GitHub</a>
-        </div>
-    </div> -->
+    <footer class="footer">
+        <p>&copy; 2025 Sualeh Ali</p>
+        <p class="footer-links">
+            <a href="https://www.linkedin.com/in/smsali97" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a> | 
+            <a href="https://github.com/smsali97" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a> | 
+            <a href="https://scholar.google.co.uk/citations?hl=en&user=G06AD30AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">Scholar</a>
+        </p>
+    </footer>
+</nav>
 
-    <div class="main">
-        <div style="display: flex; flex-wrap: wrap;">
-            <div style="flex: 50%;">
-                <img src="./img/Snapseed.jpg" alt="Sualeh Ali Profile" style="width: 100%; height: auto;" class="lozad" onload="this.style.opacity='1'">
+<!-- Main Content -->
+<main class="main" role="main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="./img/Snapseed.jpg" alt="Sualeh Ali - Senior AI Engineer and Fulbright Scholar" loading="eager">
             </div>
-            <div class="about_text" style="flex: 50%;">
-                <h1 style="font-size: 32px;">Sualeh Ali </h1>
-                <p><span style="color: #9aa90e; font-family: 'Comic Sans MS', cursive; font-size: 26px;">Salam! <span style="color: #3498DB;">(Hi)👋</p>
-                <p style="font-size: 20px;">I am a software engineer graduate student who is dabbling into some cool data science research areas. Welcome to my website.</p>
-                <div class="about_links">
-                    <a class="about_links" target="blank" href="https://www.linkedin.com/in/smsali97">LinkedIn</a>
-                    <a class="about_links" target="blank" href="https://github.com/smsali97">GitHub</a>
+            <div class="hero-text">
+                <h1>Sualeh says <span class="rotating-greeting">Salam</span> <span class="wave-hand">👋</span></h1>
+                <p class="hero-subtitle">AI Researcher & Engineer</p>
+                <p class="hero-description">
+                    I teach machines to understand human language. Sometimes they listen, sometimes they hallucinate. 
+                    Currently building agentic LLM systems at scale while researching their broader social implications, where I debug both the code and the consequences.
+                </p>
+                <div class="hero-cta">
+                    <a href="./publications.html" class="btn btn-primary">📚 View Publications</a>
+                    <a href="./Master Resume (7).pdf" class="btn btn-secondary" download>📄 Download CV</a>
+                    <a href="https://scholar.google.co.uk/citations?hl=en&user=G06AD30AAAAJ" target="_blank" class="btn btn-tertiary">🔬 Google Scholar</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
 
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>TL;DR</h2>
+        <div class="tldr-content">
+            <div class="tldr-grid">
+                <div class="tldr-item">
+                    <div class="tldr-icon">💼</div>
+                    <div class="tldr-text">
+                        <strong>Senior AI Engineer</strong>
+                        <span>Careem GenAI Team, Dubai</span>
+                    </div>
+                </div>
+                <div class="tldr-item">
+                    <div class="tldr-icon">👨‍🏫</div>
+                    <div class="tldr-text">
+                        <strong>Visiting Faculty</strong>
+                        <span>IBA Karachi • ML & Computer Vision</span>
+                    </div>
+                </div>
+                <div class="tldr-item">
+                    <div class="tldr-icon">🎓</div>
+                    <div class="tldr-text">
+                        <strong>Fulbright Scholar</strong>
+                        <span>MS Data Science, RIT • 3.90 GPA</span>
+                    </div>
+                </div>
+                <div class="tldr-item">
+                    <div class="tldr-icon">🔬</div>
+                    <div class="tldr-text">
+                        <strong>Research</strong>
+                        <span>NLP, LLMs & Multilingual AI</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+
+<script>
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to 'light' mode
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+themeToggle.addEventListener('click', function() {
+    const theme = html.getAttribute('data-theme');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+});
+
+// Rotating Greeting
+const greetings = ['Salam', 'Hello', 'Bonjour', 'السلام'];
+const rotatingGreeting = document.querySelector('.rotating-greeting');
+let currentIndex = 0;
+
+function rotateGreeting() {
+    currentIndex = (currentIndex + 1) % greetings.length;
+    rotatingGreeting.textContent = greetings[currentIndex];
+}
+
+// Rotate every 2 seconds
+setInterval(rotateGreeting, 2000);
+</script>
 
 </body>
-</html> 
+</html>
