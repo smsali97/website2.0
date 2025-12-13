@@ -98,7 +98,10 @@
     <section class="hero-section">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="./img/Snapseed.jpg" alt="Sualeh Ali - Senior AI Engineer and Fulbright Scholar" loading="eager">
+                <button type="button" class="memoji-cycle" aria-label="Cycle memoji pose">
+                    <img src="./img/profile_pictures/image.png" alt="Memoji of Sualeh Ali" loading="eager" class="memoji-image">
+                </button>
+                <span class="memoji-caption" aria-hidden="true">click me</span>
             </div>
             <div class="hero-text">
                 <h1>Sualeh says <span class="rotating-greeting">Salam</span> <span class="wave-hand">👋</span></h1>
@@ -113,6 +116,7 @@
                     <a href="https://scholar.google.co.uk/citations?hl=en&user=G06AD30AAAAJ" target="_blank" class="btn btn-tertiary">🔬 Google Scholar</a>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -190,6 +194,78 @@ function rotateGreeting() {
 
 // Rotate every 2 seconds
 setInterval(rotateGreeting, 2000);
+
+// Memoji Carousel
+const memojiFrames = [
+    './img/profile_pictures/image.png',
+    './img/profile_pictures/image copy.png',
+    './img/profile_pictures/image copy 2.png',
+    './img/profile_pictures/image copy 3.png',
+    './img/profile_pictures/image copy 4.png',
+    './img/profile_pictures/image copy 5.png',
+    './img/profile_pictures/image copy 6.png'
+].map((src, index) => ({
+    src,
+    alt: `Memoji of Sualeh Ali pose ${index + 1}`
+}));
+
+const memojiCycleButton = document.querySelector('.memoji-cycle');
+const memojiImageElement = document.querySelector('.memoji-image');
+
+if (memojiCycleButton && memojiImageElement && memojiFrames.length > 1) {
+    const ROTATION_DELAY = 30000;
+    let memojiIndex = 0;
+    let memojiIntervalId;
+
+    const applyMemojiFrame = (index) => {
+        const frame = memojiFrames[index];
+        if (!frame) {
+            return;
+        }
+        memojiImageElement.src = frame.src;
+        memojiImageElement.alt = frame.alt;
+    };
+
+    const cycleMemoji = () => {
+        memojiIndex = (memojiIndex + 1) % memojiFrames.length;
+        applyMemojiFrame(memojiIndex);
+    };
+
+    const startMemojiInterval = () => {
+        memojiIntervalId = setInterval(cycleMemoji, ROTATION_DELAY);
+    };
+
+    const resetMemojiInterval = () => {
+        if (memojiIntervalId) {
+            clearInterval(memojiIntervalId);
+        }
+        startMemojiInterval();
+    };
+
+    const handleManualCycle = () => {
+        cycleMemoji();
+        resetMemojiInterval();
+    };
+
+    memojiCycleButton.addEventListener('click', handleManualCycle);
+    memojiCycleButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleManualCycle();
+        }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            clearInterval(memojiIntervalId);
+        } else {
+            resetMemojiInterval();
+        }
+    });
+
+    applyMemojiFrame(memojiIndex);
+    startMemojiInterval();
+}
 </script>
 
 </body>
